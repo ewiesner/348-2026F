@@ -1,0 +1,48 @@
+---
+title: "Homework 01"
+author: "Insert your name"
+format: 
+  typst:
+    include-in-header:
+        - text: |
+            #show link: it => underline(text(fill: blue)[#it])
+editor: visual
+---
+
+## 
+
+Answer each of the following questions. Submit both the rendered PDF file and the source .qmd file. Explanations/analyses should be polished writing (complete sentences, good grammar, clear reasoning, etc)
+
+1.  Analyze the following figure. (Taken from "[Will This New U.S. Project Make the World’s Children Smarter?](https://www.nytimes.com/2024/10/23/opinion/lead-poisoning-children-smart-science.html)" (N. Kristoff, Oct 23, 2024, NY Times)
+
+    1.  Identify the cases, variables, and visual cues being used.
+
+    2.  Describe and critique the graphic in terms of ideas from Chapter 2. (Think about the scale being used, the use of color, labels and other text, etc.)
+
+    3.  Describe, in words, what *information* you think the data graphic conveys. Do not just summarize the *data*—interpret the data in context and tell us what it means.
+
+        ![](HW01_lead.png){width="250"}
+
+2.  (Chapter 3, #7) The `RailTrail` data set from the `mosaicData` package describes the usage of a rail trail in Western Massachusetts. Use these data to create a plot with the following characteristics.
+
+    1.  Create a scatterplot of the number of crossings per day `volume` against the high temperature that day.
+
+    2.  Separate your plot into facets by `weekday` (an indicator of weekend/holiday vs. weekday).
+
+    3.  Add regression lines to the two facets.
+
+    4.  Add informative title and axis labels.
+
+    5.  Write a few sentences about what we can take away from the plot you created.
+
+3.  View the interactive graphic "US Measles Map, 2025" from the article ["Measles tracker: Follow cases, outbreaks and vaccination rates across the U.S."](https://www.nbcnews.com/data-graphics/track-measles-outbreak-cases-us-map-rcna198932) ( Joe Murphy and Melinda Yao, April 1, 2025, NBC News). Make sure to click through all of the tabs for the map.
+
+    1.  Identify the cases, variables, and visual cues being used.
+    2.  You can find the underlying data for these maps [HERE](https://github.com/ewiesner/348-2026F/blob/main/measles_data.csv). (I also posted [my script for scraping and cleaning the data](https://github.com/ewiesner/348-2026F/blob/main/Measles_Data.qmd), in case you are interested.) Use the data to create one clear and informative graphic about measles.
+    3.  Write a paragraph comparing and contrasting your graphic with the original maps. What can you learn from each? Advantages and disadvantages for the different plots?
+
+4.  (Chapter 3, #3) This question uses the `Marriage` dataset from the `mosaicData` package.
+
+    1.  Create an informative and meaningful data graphic.
+    2.  Describe your choices for the graphic and why you think they are effective.
+    3.  Create a data graphic with at least *five* variables (either quantitative or categorical). For the purposes of this exercise, do not worry about making your visualization meaningful—just try to encode five variables into one plot.
