@@ -1,0 +1,52 @@
+state,personal_exemption,religious_exemption,any_exemption,mmr_vaccinated,exempt_rate,cases_2025
+Alabama,No,Yes,Yes,93.8,2.2,1
+Alaska,No,Yes,Yes,84.3,9.5,4
+Arizona,Yes,Yes,Yes,89.3,8.5,222
+Arkansas,Yes,Yes,Yes,92.5,3.5,8
+California,No,No,No,96.2,0.1,26
+Colorado,Yes,Yes,Yes,88.3,4.2,35
+Connecticut,No,No,No,97.7,0.5,1
+Delaware,No,Yes,Yes,93.8,2.5,0
+D.C.,No,Yes,Yes,92,2.3,0
+Florida,No,Yes,Yes,88.1,4.8,8
+Georgia,No,Yes,Yes,88.4,3.6,10
+Hawaii,No,Yes,Yes,89.8,5.3,2
+Idaho,Yes,Yes,Yes,79.6,14.3,14
+Illinois,No,Yes,Yes,91.6,2.5,14
+Indiana,No,Yes,Yes,90.8,2.4,10
+Iowa,No,Yes,Yes,89.1,3.4,9
+Kansas,No,Yes,Yes,90.4,3,91
+Kentucky,No,Yes,Yes,90,2.3,13
+Louisiana,Yes,Yes,Yes,92.4,2.8,3
+Maine,No,No,No,97.5,1,0
+Maryland,No,Yes,Yes,96.6,2.2,3
+Massachusetts,No,Yes,Yes,96.3,1.4,0
+Michigan,Yes,Yes,Yes,92.1,5.6,29
+Minnesota,Yes,No,Yes,87,5.4,26
+Mississippi,No,Yes,Yes,97.5,0.7,0
+Missouri,No,Yes,Yes,90.4,4.7,6
+Montana,No,Yes,Yes,NA,NA,36
+Nebraska,No,Yes,Yes,93.9,3.5,5
+New Hampshire,No,Yes,Yes,89.2,4.1,0
+New Jersey,No,Yes,Yes,93.2,3.9,12
+New Mexico,No,Yes,Yes,95,1.6,100
+New York,No,No,No,97.7,0.1,26
+Nevada,No,Yes,Yes,91.9,6.7,2
+North Carolina,No,Yes,Yes,93.8,2.9,2
+North Dakota,Yes,Yes,Yes,90.9,6.5,36
+Ohio,Yes,Yes,Yes,89.2,4.2,40
+Oklahoma,Yes,Yes,Yes,88.3,5.7,17
+Oregon,Yes,Yes,Yes,91.2,8.9,1
+Pennsylvania,Yes,Yes,Yes,93.5,5,16
+Rhode Island,No,Yes,Yes,97.1,1.7,1
+South Carolina,No,Yes,Yes,92.1,4.4,333
+South Dakota,No,Yes,Yes,90.8,5.7,16
+Tennessee,No,Yes,Yes,95.1,3.6,8
+Texas,Yes,Yes,Yes,94.3,3.9,803
+Utah,Yes,Yes,Yes,88.8,9.3,189
+Vermont,No,Yes,Yes,92.9,4,2
+Virginia,No,Yes,Yes,94.2,2.4,6
+Washington,Yes,Yes,Yes,91.3,4.8,11
+West Virginia,Yes,Yes,Yes,98.3,0.1,0
+Wisconsin,Yes,Yes,Yes,84.8,8,36
+Wyoming,No,Yes,Yes,93.5,5.6,15

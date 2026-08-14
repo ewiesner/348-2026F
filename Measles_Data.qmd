@@ -1,0 +1,112 @@
+---
+title: "Measles_Data_Extraction"
+format: html
+editor: visual
+---
+
+```{r}
+library(rvest)
+library(dplyr)
+library(janitor)
+```
+
+First we scrape the data from the CDC website on vaccination and exemption rates.
+
+```{r}
+url <- "https://www.cdc.gov/mmwr/volumes/73/wr/mm7341a3.htm"
+
+
+tables <- read_html(url) |>
+  html_table(fill = TRUE)
+
+tbl1 <- tables[[1]] |>
+  clean_names()
+```
+
+The data needs some cleaning. I only want a couple of the columns, and some of the rows are summary information that I do not want. Also, the columns I am keeping have some other characters in them that I do not want.
+
+```{r}
+mmr <- tbl1[5:57,] |>
+  select(
+  state = jurisdiction,
+  mmr_vaccinated = percentage_2, exempt_rate=percentage_7) |>
+  mutate(state=gsub("[^A-Za-z ]", "", state))|>
+  mutate(mmr_vaccinated=as.numeric(gsub("[^0-9.]","", mmr_vaccinated))) |>
+  mutate(exempt_rate=as.numeric(gsub("[^0-9.]","", exempt_rate))) |>
+  mutate(state = if_else(state == "District of Columbia","D.C.",state)) |>
+  mutate(state = if_else(state == "New York including NYC","New York",state)) |>
+  mutate(state = if_else(state == "Texas including Houston","Texas",state)) |>
+  mutate(state=trimws(state))
+
+
+
+```
+
+Next I will get the data on types of exemptions.
+
+```{r}
+url2 <- "https://www.ncsl.org/health/state-non-medical-exemptions-from-school-immunization-requirements"
+
+tables <- read_html(url2) |>
+  html_table(fill = TRUE)
+
+tbl2 <- tables[[1]] |>
+  clean_names()
+```
+
+Clean up this data frame:
+
+```{r}
+names(tbl2)
+
+```
+
+```{r}
+state_exemptions<-tbl2 |>
+  select(state, personal_exemption, religious_exemption) |>
+  mutate(any_exemption=ifelse(personal_exemption=="Yes"|religious_exemption=="Yes", "Yes", "No")) |>
+  mutate(state=trimws(state))
+```
+
+Lastly, we get the number of cases.
+
+```{r}
+cases<-read_csv("MeaslesCasesMap.csv")
+
+names(cases)
+```
+
+```{r}
+
+library(readr)
+
+cases<-read_csv("MeaslesCasesMap.csv") |>
+  mutate(state=Location) |>
+  mutate(cases_2025=`2025`) |>
+  select(state, cases_2025)|>
+  mutate(state = if_else(state == "District of Columbia",
+      "D.C.",state))
+  
+```
+
+Now we join all of the files.
+
+```{r}
+measles_data <- left_join(
+  state_exemptions,
+  mmr,
+  by = "state"
+)
+
+measles_data <- left_join(
+  measles_data,
+  cases,
+  by = "state"
+)
+```
+
+Now I'll save the dataframe as a csv to share:
+
+```{r}
+write_csv(measles_data, "measles_data.csv")
+```
