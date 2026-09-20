@@ -3,12 +3,12 @@ TXN_1961373,Coffee,2,2,4,Credit Card,Takeaway,9/8/23
 TXN_4977031,Cake,4,3,12,Cash,In-store,5/16/23
 TXN_4271903,Cookie,4,1,ERROR,Credit Card,In-store,7/19/23
 TXN_7034554,Salad,2,5,10,UNKNOWN,UNKNOWN,4/27/23
-TXN_3160411,coffee,2,2,4,Digital Wallet,In-store,6/11/23
+TXN_3160411,Coffee,2,2,4,Digital Wallet,In-store,6/11/23
 TXN_2602893,Smoothie,5,4,20,Credit Card,,3/31/23
 TXN_4433211,UNKNOWN,3,3,9,ERROR,Takeaway,10/6/23
 TXN_6699534,Sandwich,4,4,16,Cash,UNKNOWN,10/28/23
 TXN_4717867,,5,3,15,,Takeaway,7/28/23
-TXN_2064365,sandwich,5,4,20,,In-store,12/31/23
+TXN_2064365,Sandwich,5,4,20,,In-store,12/31/23
 TXN_2548360,Salad,5,5,25,Cash,Takeaway,11/7/23
 TXN_3051279,Sandwich,2,4,8,Credit Card,Takeaway,ERROR
 TXN_7619095,Sandwich,2,4,8,Cash,In-store,5/3/23
